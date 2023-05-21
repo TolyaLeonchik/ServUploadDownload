@@ -9,7 +9,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.time.LocalDateTime;
 
 @WebServlet("/load-book")
@@ -28,10 +27,10 @@ public class Upload extends HttpServlet {
             String name = filePart.getSubmittedFileName();
             filePart.write("C:\\" + name);
             resp.getWriter().print("The file uploaded successfully :)");
-            System.out.println(LocalDateTime.now());
+            System.out.println("Request to Upload File in " + LocalDateTime.now());
         } catch (Exception e) {
             resp.getWriter().print("Something wrong :(");
-            System.out.println(LocalDateTime.now());
+            System.out.println("Failed Request to Upload File in " + LocalDateTime.now());
         }
     }
 }

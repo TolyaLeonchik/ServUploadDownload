@@ -3,8 +3,6 @@ package com.pageRequest.Listeners;
 import jakarta.servlet.ServletRequestEvent;
 import jakarta.servlet.ServletRequestListener;
 import jakarta.servlet.annotation.WebListener;
-
-import java.time.LocalDateTime;
 @WebListener
 public class Request implements ServletRequestListener {
     @Override

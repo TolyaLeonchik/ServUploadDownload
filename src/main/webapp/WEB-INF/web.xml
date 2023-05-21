@@ -4,6 +4,9 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <listener>
+    <listener-class>com.pageRequest.Listeners.StartApplication</listener-class>
+  </listener>
   <servlet>
     <servlet-name>upload</servlet-name>
     <servlet-class>com.pageRequest.Upload</servlet-class>

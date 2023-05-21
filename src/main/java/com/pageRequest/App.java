@@ -1,12 +1,12 @@
 package com.pageRequest;
 
+import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,7 +20,11 @@ public class App extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter printWriter = resp.getWriter();
         printWriter.println("<h1>It's working!</h1>");
+    }
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
         System.out.println("It's working!");
-        System.out.println(LocalDateTime.now());
+        System.out.println("Request Main Page in " + LocalDateTime.now());
     }
 }

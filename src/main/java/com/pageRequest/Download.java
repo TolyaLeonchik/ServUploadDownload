@@ -27,10 +27,10 @@ public class Download extends HttpServlet {
             String name = filePart.getSubmittedFileName();
             filePart.write("C:\\" + name);
             resp.getWriter().print("The file downloading successfully :)");
-            System.out.println(LocalDateTime.now());
+            System.out.println("Request to Download File in " + LocalDateTime.now());
         } catch (Exception e) {
             resp.getWriter().print("Something wrong :(");
-            System.out.println(LocalDateTime.now());
+            System.out.println("Failed Request to Download File in " + LocalDateTime.now());
         }
     }
 }
